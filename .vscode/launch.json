@@ -1,0 +1,16 @@
+{
+    "configurations": [
+
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - App",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "externalTerminal",
+            "stopOnEntry": false,
+            "mainClass": "com.parsinglocations.app.App",
+            "args": ["https://s3.amazonaws.com/intercom-take-home-test/customers.txt","53.339428,-6.257664"],
+            "projectName": "distance-app"
+        }
+    ]
+}
