@@ -22,12 +22,12 @@ public class FileDownloader
                 fileContents.append(line).append(System.lineSeparator());
         
         } catch (IOException ex) {
-            ex.printStackTrace();
+            System.out.println(ex.getMessage());
         } finally {
             try {
                 if (bf != null) bf.close();
             } catch (IOException ex) {
-                ex.printStackTrace();
+                System.out.println(ex.getMessage());
             }
         }
     }

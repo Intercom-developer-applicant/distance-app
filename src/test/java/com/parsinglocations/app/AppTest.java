@@ -1,6 +1,8 @@
 package com.parsinglocations.app;
 
 import org.junit.Test;
+
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Collections;
@@ -113,7 +115,15 @@ public class AppTest
         data.add("Dog");
         data.add("Horse");
         data.add("Monkey");
+  
+        String fileLoc = "target\\test-output\\saving.txt";
 
-        SendData.print(data, "target\\test-output\\saving.txt");
+        SendData.print(data, fileLoc);
+
+        // Confirm that the file exists
+        // Then clear the file for subsequent runs
+        File file = new File(fileLoc);
+        Assert.assertTrue(file.exists());
+        file.delete();
     }
 }

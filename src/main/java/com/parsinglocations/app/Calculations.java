@@ -17,7 +17,7 @@ public class Calculations
             degNum = Double.parseDouble(deg);
         } catch (NumberFormatException ex) {
             // If not a double - return 0.0
-            ex.printStackTrace();
+            System.out.println(ex.getMessage());
             degNum = 0.0;
         }
         return degNum * (Math.PI / 180);
